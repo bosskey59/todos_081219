@@ -1,0 +1,9 @@
+<h3><%= @todo.id %></h3>
+<h2><%= @todo.description %></h2>
+<h3><%= @todo.done ? "DONE" : "not completed" %></h3>
+<a href="/todos/<%=@todo.id%>/edit"><button> Edit </button></a>
+
+<form action="/todos/<%=@todo.id%>" method= "POST">
+<input type="hidden" name="_method" value="delete">
+<input type="submit" value="Delete">
+</form>

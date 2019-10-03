@@ -1,0 +1,7 @@
+<h1><%= @user.name %>'s todos Index Page</h1>
+
+<ul>
+<% @todos.each do |todo| %>
+    <li><a href="/todos/<%= todo.id %>"><%= todo.description %></a></li>
+<% end %>
+</ul>

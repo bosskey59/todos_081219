@@ -1,0 +1,8 @@
+<form action="/todos/<%=@todo.id%>" method= "POST">
+<input type="hidden" name="_method" value="patch">
+<label for="description"> Todo Content:</label>
+<textarea name="todo[description]" cols="30" rows="10" ><%=@todo.description%></textarea>
+<label for="description"> Completed?</label>
+<input type="checkbox" value="true" name="todo[done]"<%= @todo.done ? "checked" : nil %> >
+<input type="submit" >
+</form>
